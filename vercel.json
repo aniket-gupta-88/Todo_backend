@@ -2,6 +2,6 @@
     "version": 2,
     "name" : "todo-app",
     "builds" : [
-        { "src" : "src", "use" : "@vercel/node"}
+        { "src" : "src/app.js", "use" : "@vercel/node"}
     ]
 }
