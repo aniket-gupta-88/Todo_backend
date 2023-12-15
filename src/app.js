@@ -8,20 +8,20 @@ import cors from 'cors'
 const app = express();
 
 app.use(cors());
-const { DB_CONNECT, NODE_ENV, PORT } = process.env;
 
-mongoose.connect(DB_CONNECT)
+mongoose.connect
+    ( DB_CONNECT)
     .then(() => {
         console.log("Connected to MongoDB successfully.");
-    })
-    .catch((err) => {
+      })
+      .catch((err) => {
         console.error("Error connecting to MongoDB:", err);
-    });
+      });
 
-const port = PORT || 8000;
+const PORT = 8000;
 
 app.use(express.json());
 app.use('/api/', apiRoute);
 app.use('/api/', AuthMiddleware ,apiProtected);
 
-app.listen(PORT, ()=> console.log(`server is running on ${port}`)) 
+app.listen(PORT, ()=> console.log(`server is running on ${PORT}`)) 
