@@ -18,7 +18,7 @@ mongoose.connect
         console.error("Error connecting to MongoDB:", err);
       });
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use('/api/', apiRoute);
