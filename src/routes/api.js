@@ -2,7 +2,7 @@ import express from 'express';
 import { check } from 'express-validator';
 import Register from '../controllers/Registercontroller.js';
 import Login from '../controllers/Logincontroller.js';
-import { createTodo } from '../controllers/todocontroller.js';
+import { createTodo } from '../controllers/Todocontroller.js';
 import {RegisterSchema} from '../ValidationSchema/RegisterSchema.js'
 import { LoginSchema } from '../ValidationSchema/LoginSchema.js';
 import { GetTodos } from '../controllers/TodoListcontroller.js';
